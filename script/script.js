@@ -53,7 +53,10 @@ filterBtn.addEventListener("click", () => {
       email.innerHTML = user.email
     }
     // checken of er een dubbele gebruiker is
-    // if (filterInput.value == )
+    if (filterInput.value == user.fullname){
+      username2.innerHTML = user.fullname
+      email2.innerHTML = user.email
+    }
   });
 })
 
@@ -70,9 +73,10 @@ const registreerDiv = document.querySelector("#registreerForm")
 
 registreerBtn.addEventListener("click", () => {
   if (nameInput.value != "" || emailInput.value != "" || passwordInput.value != "" ){
-    users.push[{fullname: nameInput.value,
-                email:emailInput.value,
-                password: passwordInput}]
+    users.push({
+                fullname: (nameInput.value),
+                email: (emailInput.value),
+                password: (passwordInput.value)})
     console.log(users);
   } else{
       // error melding geven als niet alle velden zijn ingevuld
